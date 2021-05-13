@@ -1,0 +1,23 @@
+1. For a course c, list all covered topics t, printing out their English labels and their DBpedia URI,together  with  the  course  event  URI  (e.g.,  ’lab3’)  and  resource  URI  (e.g.,  ’slides10’)  where  they appeared.
+
+PREFIX ex: <http://example.org/>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX teach: <http://linkedscience.org/teach/ns#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+SELECT ?name ?link ?event ?resource
+WHERE {?sub a teach:Course ;
+            dcterms:subject 'COMP' ;
+			dcterms:identifier '6741'^^xsd:integer ;
+			ex:hasTopic ?topic .
+  ?topic a ex:Topic ;
+       dcterms:title ?name ;
+       foaf:page ?link .
+  ?resourceuri ex:topicCovered ?topic ;
+       ex:resource ?resource .
+  ?eventuri ex:hasContent ?resourceuri ;
+            ex:event ?event .
+} 

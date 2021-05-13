@@ -1,0 +1,3691 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.1
+
+Lecture 9
+Text Mining
+COMP 474/6741, Winter 2021
+
+René Witte
+Department of Computer Science
+
+and Software Engineering
+Concordia University
+
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.2
+
+Outline
+
+1 Introduction
+
+2 Natural Language Processing (NLP)
+
+3 Text Mining
+
+4 Notes and Further Reading
+
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.3
+
+Slides Credit
+
+• Includes slides from Hoifung Poon, Chris Quirk & Scott Wen-Tau Yih, Machine
+Reading for Precision Medicine, https://www.microsoft.com/en-us/research/
+uploads/prod/2018/01/1802_aaai-tutorial_precision-med.pdf
+
+• Includes slides from Matthew Honnibal & Ines Montani, An introduction to
+spaCy,
+https://github.com/explosion/talks/blob/master/2017-08-28_spaCy-101.pdf
+
+https://www.microsoft.com/en-us/research/uploads/prod/2018/01/1802_aaai-tutorial_precision-med.pdf
+https://www.microsoft.com/en-us/research/uploads/prod/2018/01/1802_aaai-tutorial_precision-med.pdf
+https://github.com/explosion/talks/blob/master/2017-08-28_spaCy-101.pdf
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.4
+
+Information Overload
+
+Too much (textual) information
+
+• We now have electronic books, documents, web pages, emails, blogs, news,
+chats, memos, research papers, . . .
+
+• . . . all of it immediately accessible, thanks to databases and Information
+Retrieval (IR)
+
+• An estimated 80–85% of all data stored in databases are natural language texts
+• But humans did not scale so well. . .
+
+Results in the common perception of Information Overload (or even
+information rage)
+
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.5
+
+Architecture 1.0
+
+DocumentsKnowledge Worker
+
+
+
+Example: Tumor Board KB Curation
+
+21
+
+The deletion mutation on exon-19 of EGFR gene was present in 16
+
+patients, while the L858E point mutation on exon-21 was noted in 10.
+
+All patients were treated with gefitinib and showed a partial response.
+
+Gefitinib can treat tumors w. EGFR-L858E mutation
+
+
+
+PubMed
+27 million abstracts
+
+Two new abstracts every minute
+
+Adds over one million every year
+
+23
+
+
+
+…
+
+VDR+ binds to 
+
+SMAD3 to form
+
+…
+
+…
+
+JUN expression 
+
+is induced by 
+
+SMAD3/4
+
+…
+
+PMID: 123
+
+PMID: 456
+
+…
+…
+
+Machine Reading
+
+Knowledge 
+
+Base
+
+29
+
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.9
+
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.10
+
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.11
+
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.12
+
+Architecture 2.0
+
+Knowledge Worker DocumentsNLP Pipeline
+
+→ Worksheet #8: Task 1
+
+
+
+https://www.refinitiv.com/perspectives/ai- digitalization/four- ways- to- apply- nlp- in- financial- services/
+
+https://www.refinitiv.com/perspectives/ai-digitalization/four-ways-to-apply-nlp-in-financial-services/
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.14
+
+So you want to build a Text Mining system. . .
+
+Requirements
+An NLP system requires a large amount of infrastructure work:
+
+• Document handling, in various formats (plain text, HTML, XML, PDF, . . .), from
+various sources (files, DBs, email, . . .)
+
+• Annotation handling (stand-off markup)
+• Component implementations for standard tasks, like Tokenizers, Sentence
+
+Splitters, Part-of-Speech (POS) Taggers, Finite-State Transducers, Full
+Parsers, Classifiers, Noun Phrase Chunkers, Lemmatizers, Entity Taggers,
+Coreference Resolution Engines, Summarizers, . . .
+
+As well as resources for concrete tasks and languages:
+• Lexicons, WordNets
+• Grammar files and Language models
+• Machine Learning Algorithms
+• Evaluation Metrics
+• etc.
+
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.15
+
+Existing Resources
+
+Fortunately, you don’t have to start from scratch
+Many (open source) tools and resources are available:
+NLP Tools: programs performing a single task, like classifiers, parsers, or NP
+
+chunkers
+Frameworks: integration architectures for combining and controlling all components
+
+and resources of an NLP system
+Resources: for various languages, like lexicons, wordnets, or grammars
+
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.16
+
+NLP Development
+
+Major Frameworks
+Two important frameworks are:
+
+• GATE (General Architecture for Text Engineering), under development since
+1995 at University of Sheffield, UK
+
+• UIMA (Unstructured Information Management Architecture), developed by IBM;
+open-sourced in 2007 (Apache project)
+
+Both frameworks are open source (GATE: LGPL, UIMA: Apache)
+
+Libraries
+
+• Numerous NLP libraries: NLTK (Python), Stanford CoreNLP, OpenNLP. . .
+• Various integrations (e.g, CoreNLP has GATE wrapper, Python bindings)
+
+Current Trends
+
+• Increasing use of Deep Learning tools/frameworks for NLP
+• Keras, TensorFlow, PyTorch etc.
+
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.17
+
+Unstructured Information Management Architecture (UIMA)
+
+Copyright 2011, 2019 The Apache Software Foundation, https://uima.apache.org/d/ruta- current/tools.ruta.book.html
+
+https://uima.apache.org/d/ruta-current/tools.ruta.book.html
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.18
+
+General Architecture for Text Engineering (GATE)
+
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.19
+
+NLP Pipeline in GATE
+
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.20
+
+Pipeline Step: Tokenization
+
+Example Tokenisation Rules
+
+#numbers#
+// a number is any combination of digits
+"DECIMAL_DIGIT_NUMBER"+ >Token;kind=number;
+
+#whitespace#
+(SPACE_SEPARATOR) >SpaceToken;kind=space;
+(CONTROL) >SpaceToken;kind=control;
+
+Example Output
+
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.21
+
+Pipeline Step: POS Tagging
+
+Producing POS Annotations
+POS-Tagging assigns a part-of-speech-tag (POS tag) to each Token.
+
+• GATE comes with the Hepple tagger for English, which is a modified version of
+the Brill tagger
+
+Example output
+
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.22
+
+Pipeline Step: Named Entity (NE) Detection
+
+Transducer-based NE Detection
+Using all the information obtained in the previous steps (Tokens, Gazetteer lookups,
+POS tags), ANNIE now runs a sequence of JAPE-Transducers to detect Named
+Entities (NE)s.
+
+Example for a detected Person
+
+We can now look at the grammar rules that found this person.
+
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.23
+
+Entity Detection: Finding Persons
+
+Strategy
+A JAPE grammar rule combines
+information obtained from POS-tags with
+Gazetteer lookup information
+
+• although the last name in the
+example is not in any list, it can be
+found based on its POS tag and an
+additional first name/last name rule
+(not shown)
+
+• many additional rules for other
+Person patterns, as well as
+Organizations, Dates, Addresses, . . .
+
+Persons with Titles
+Rule: PersonTitle
+Priority: 35
+(
+{Token.category == DT}|
+{Token.category == PRP}|
+{Token.category == RB}
+)?
+(
+(TITLE)+
+((FIRSTNAME | FIRSTNAMEAMBIG
+| INITIALS2)
+
+)?
+(PREFIX)*
+(UPPER)
+(PERSONENDING)?
+)
+:person --> ...
+
+→ Worksheet #8: Task 2
+
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.24
+
+Outline
+
+1 Introduction
+
+2 Natural Language Processing (NLP)
+Language Models
+Tokenization
+Sentence Splitting
+Morphology
+Part-of-Speech (POS) Tagging
+Chunking and Parsing
+Named Entity Recognition
+Entity Linking
+Pipelines
+
+3 Text Mining
+
+4 Notes and Further Reading
+
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.25
+
+NLP Applications
+
+Copyright 2019 by Manning Publications Co., [LHH19]
+
+
+
+https://spacy.io/
+
+https://spacy.io/
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.27
+
+Example NLP Pipeline
+
+Copyright 2019 by Manning Publications Co., [LHH19]
+
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.28
+
+Language Models
+
+Language dependent code
+
+• Some parts of spaCy work language-independent
+• But many steps require language-specific data, such as rules or pre-trained ML
+
+models
+
+Need to load a language model to start, e.g., for English:
+
+import spacy
+nlp = spacy.load("en_core_web_sm")
+
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.29
+
+Tokenization
+
+Tokenization
+Text is split into basic units called Tokens:
+
+• word tokens
+• number tokens
+• space tokens
+• . . .
+
+Consistent tokenization is important for all later processing steps
+
+What is a word?
+Unfortunately, even tokenization can be difficult:
+
+• Is “John’s” in John’s sick one token or two?
+If one → problems in parsing (where’s the verb?)
+If two → what do we do with John’s house?
+
+• What to do with hyphens?
+E.g., database vs. data-base vs. data base
+
+• what to do with “C++”, “A/C”, “:-)”, “. . .”?
+
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.30
+
+Tokenization
+doc = nlp(u"Let's go to N.Y.!") 
+print([token.text for token in doc])
+
+→ Worksheet #8: Task 3
+
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.31
+
+Sentence Splitting (a.k.a. Sentence Segmentation)
+
+Mark Sentence Boundaries
+Detects sentence units. Easy case:
+
+• often, sentences end with “.”, “!”, or “?”
+Hard (or annoying) cases:
+
+• difficult when a “.” do not indicate an EOS:
+“MR. X”, “3.14”, “Y Corp.”, . . .
+
+• we can detect common abbreviations (“U.S.”), but what if a sentence ends with
+one?
+“. . .announced today by the U.S. The. . .
+
+• Sentences can be nested (e.g., within quotes)
+
+Correct sentence boundary is important
+for many downstream analysis tasks:
+
+• POS-Taggers maximize probabilites of tags within a sentence
+• Most Parsers work on individual sentences
+
+See https://en.wikipedia.org/wiki/Sentence_boundary_disambiguation
+
+https://en.wikipedia.org/wiki/Sentence_boundary_disambiguation
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.32
+
+Some difficult examples for sentence splitting
+
+I live in the U.S. but I commute to work in Mexico on S.V. Australis for a
+woman from St. Bernard St. on the Gulf of Mexico.
+
+I went to G.T.You?
+
+She yelled “It’s right here!” but I kept looking for a sentence boundary
+anyway.
+
+I stared dumbfounded on as things like “How did I get here?,” “Where
+am I?,” “Am I alive?” flittered across the screen.
+
+The author wrote “’I don’t think it’s conscious.’ Turing said.”
+
+https://www.tm-town.com/natural-language-processing#golden_rules
+
+→ Worksheet #8: Task 4
+
+https://www.tm-town.com/natural-language-processing#golden_rules
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.33
+
+Morphological Analysis
+
+Morphological Variants
+Words are changed through a morphological process called inflection:
+
+• typically indicates changes in case, gender, number, tense, etc.
+• example car → cars, give → gives, gave, given
+
+Goal: “normalize” words
+
+Stemming and Lemmatization
+Two main approaches to normalization:
+Stemming reduce words to a base form
+Lemmatization reduce words to their lemma
+Main difference: stemming just finds any base form, which doesn’t even need to be
+a word in the language! Lemmatization find the actual root of a word, but requires
+morphological analysis.
+
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.34
+
+Stemming vs. Lemmatization
+
+Stemming
+Commonly used in Information Retrieval:
+
+• Can be achieved with rule-based algorithms, usually based on suffix-stripping
+• Standard algorithm for English: the Porter stemmer
+• Advantages: simple & fast
+• Disadvantages:
+
+• Rules are language-dependent
+• Can create words that do not exist in the language, e.g., computers → comput
+• Often reduces different words to the same stem, e.g.,
+
+army, arm → arm
+stocks, stockings → stock
+
+• Stemming for other languages: Lucene and Snowball stemmer have rule files
+for many languages
+
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.35
+
+Stemming vs. Lemmatization, Part II
+
+Lemmatization
+Lemmatization is the process of deriving the base form, or lemma, of a word from
+one of its inflected forms. This requires a morphological analysis, which in turn
+typically requires a lexicon.
+
+• Advantages:
+• identifies the lemma (root form), which is an actual word
+• less errors than in stemming
+
+• Disadvantages:
+• more complex than stemming, slower
+• requires additional language-dependent resources
+
+• While stemming is good enough for Information Retrieval, Text Mining often
+requires lemmatization
+
+• Semantics is more important (we need to distinguish an army and an arm!)
+• Errors in low-level components can multiply when running downstream
+
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.36
+
+Part-of-Speech (POS) Tagging
+
+Where are we now?
+So far, we splitted texts into tokens and sentences and performed some
+normalization.
+
+• Still a long way to go to an understanding of natural language. . .
+Typical approach in text mining: deal with the complexity of language by applying
+intermediate processing steps to acquire more and more structure. Next stop:
+POS-Tagging.
+
+POS-Tagging
+A statistical POS Tagger scans tokens and assigns POS Tags.
+A black cat plays. . . → A/DT black/JJ cat/NN plays/VB. . .
+
+• relies on different word order probabilities
+• needs a manually tagged corpus for machine learning
+
+Note: this is not parsing!
+
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.37
+
+Part-of-Speech (POS) Tagging (II)
+
+Tagsets
+A tagset defines the tags to assign to words. Main POS classes are:
+Noun refers to entities like people, places, things or ideas
+Adjective describes the properties of nouns or pronouns
+Verb describes actions, activities and states
+Adverb describes a verb, an adjective or another adverb
+Pronoun word that can take the place of a noun
+Determiner describes the particular reference of a noun
+Preposition expresses spatial or time relationships
+Note: real tagsets have from 45 (Penn Treebank) to 146 tags (C7).
+
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.38
+
+POS Tagging Algorithms
+
+Fundamentals
+POS-Tagging generally requires:
+Training phase where a manually annotated corpus is processed by a machine
+
+learning algorithm; and a
+Tagging algorithm that processes texts using learned parameters.
+Performance is generally good (around 96%) when staying in the same domain.
+
+Algorithms used in POS-Tagging
+There is a multitude of approaches, commonly used are:
+
+• Decision Trees
+• Hidden Markov Models (HMMs)
+• Support Vector Machines (SVM)
+• Transformation-based Taggers (e.g., the Brill tagger)
+
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.39
+
+POS Tagging in spaCy
+
+import spacy
+
+nlp = spacy.load("en_core_web_sm")
+doc = nlp("Apple is looking at buying U.K. startup for $1 billion")
+
+for token in doc:
+print(token.text, token.lemma_, token.pos_, token.tag_, token.dep_,
+
+token.shape_, token.is_alpha, token.is_stop)
+
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.40
+
+Tagsets
+
+Understanding POS Tags
+
+• There are different tagsets used by different tools
+• spaCy has a built-in explanation method:
+
+spacy.explain("NNP")
+> noun, proper singular
+
+• spaCy uses the Universal Dependency Scheme
+(https://universaldependencies.org/u/pos/)
+
+→ Worksheet #8: Task 5
+
+https://universaldependencies.org/u/pos/
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.41
+
+Syntax: Chunking and Parsing
+
+Finding Syntactic Structures
+We can now start a syntactic analysis of a sentence using:
+Parsing producing a parse tree for a sentence using a parser, a grammar, and
+
+a lexicon
+Chunking finding syntactic constituents like Noun Phrases (NPs) or
+
+Verb Groups (VGs) within a sentence
+
+Chunking vs. Parsing
+Producing a full parse tree often fails due to grammatical inaccuracies, novel words,
+bad tokenization, wrong sentence splits, errors in POS tagging, . . .
+Hence, chunking and partial parsing are more commonly used.
+
+From Natural Language Processing with Python, by Steven Bird, Ewan Klein and Edward Loper, Copyright 2019 the authors. It is distributed with the Natural Language Toolkit [http://nltk.org/], Version 3.0, under the terms of the Creative Commons Attribution-Noncommercial-No
+Derivative Works 3.0 United States License [http://creativecommons.org/licenses/by-nc-nd/3.0/us/].
+
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.42
+
+Noun Phrase Chunking
+
+NP Chunker
+Rule-based approach for finding NPs
+
+Grammar Excerpt
+
+(NP (DET MOD HEAD))
+(MOD (MOD-ingredients)
+
+(MOD-ingredients MOD)
+())
+
+(HEAD (NN) . . .)
+
+Example
+
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.43
+
+NP Chunking in spaCy
+
+import spacy
+
+nlp = spacy.load("en_core_web_sm")
+doc = nlp("Autonomous cars shift insurance liability toward manufacturers")
+for chunk in doc.noun_chunks:
+
+print(chunk.text, chunk.root.text, chunk.root.dep_,
+chunk.root.head.text)
+
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.44
+
+Chunking vs. Parsing, Round 2
+
+What can we do with chunks?
+(NP) chunks are very useful in finding named entities (NEs), e.g., Persons,
+Companies, Locations, Patents, Organisms, . . ..
+
+But additional methods are needed for finding relations:
+• Who invented X?
+• What company created product Y that is doomed to fail?
+• Which organism is this protein coming from?
+
+Parse trees can help in determining these relationships
+Parsing Challenges
+Parsing is hard due to many kinds of ambiguities:
+PP-Attachement which NP takes the PP? Compare:
+
+He ate spaghetti with a fork.
+He ate spaghetti with tomato sauce.
+
+NP Bracketing plastic cat food can cover
+
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.45
+
+POS tags & dependencies
+
+doc = nlp(u"Apple is looking at buying U.K. startup") 
+
+for token in doc: 
+    print(token.text, token.pos_, token.tag_)
+
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.46
+
+Constituent-based Parse Tree vs. Dependency Parsing
+Parsing “I prefer the morning flight through Denver.”
+
+[JM], Figure 14.1→ Worksheet #8: Task 6
+
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.47
+
+Named Entity Recognition in spaCy
+
+import spacy
+
+nlp = spacy.load("en_core_web_sm")
+doc = nlp("Apple is looking at buying U.K. startup for $1 billion")
+
+for ent in doc.ents:
+print(ent.text, ent.start_char, ent.end_char, ent.label_)
+
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.48
+
+Entity Models
+
+Which entities are detected?
+
+• Depends on the model and its training data
+• E.g., spaCy trained on the OntoNotes-5.0 corpus
+
+(https://catalog.ldc.upenn.edu/LDC2013T19)
+
+→ Worksheet #8: Task 7
+
+https://catalog.ldc.upenn.edu/LDC2013T19
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.49
+
+To rule or not to rule...
+
+How to find a new kind of Named Entity (NE)?
+Two general solutions:
+Rule-based: write rules (regular expressions, transducers) that capture as many
+
+variations as possible, with as few false positives as possible
+Machine learning: train a machine learning model, using manually annotated
+
+examples (supervised learning)
+
+Pros&Cons
+
+• Rules can be developed quickly: good for proof-of-concept/demo,
+bootstrapping a ML corpus, easy (unambiguous) patterns
+
+• Rules are “brittle”, they do not generalize well
+• ML solutions generally perform better (more robust with respect to variations)
+• But a ML approach requires significant effort for creating training data, as well
+
+as effort for feature engineering, training, evaluation, etc.
+
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.50
+
+Developing Rules
+
+Finite-state Transducers
+In NLP, we generally use Finite-state Transducers (FSTs) for processing rules.
+
+• Theory: Special kind of finite-state machine with input and output tape
+• Practice: Unlike using regular expressions matching only the text, we match a
+
+graph, formed by the tokens, POS tags, dependency information, etc.
+
+→ Worksheet #8: Task 8
+
+
+
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.52
+
+Entity Linking
+
+Grounding to a Knowledge Base
+spaCy provides an API for linking entities to a knowledge base, but (currently) no
+pre-trained models.
+
+Example Pipeline
+See some experimental development code using Wikidata at
+https://pypi.org/project/spacy-entity-linker/
+
+import spacy
+from SpacyEntityLinker import EntityLinker
+entityLinker = EntityLinker()
+nlp = spacy.load("en_core_web_sm")
+nlp.add_pipe(entityLinker, last=True, name="entityLinker")
+doc = nlp("I watched the Pirates of the Carribean last silvester")
+
+#returns all entities in the whole document
+all_linked_entities=doc._.linkedEntities
+for sent in doc.sents:
+
+sent._.linkedEntities.pretty_print()
+
+#OUTPUT:
+#https://www.wikidata.org/wiki/Q194318 194318
+
+Pirates of the Caribbean Series of fantasy adventure films
+#https://www.wikidata.org/wiki/Q12525597 12525597
+
+Silvester the day celebrated on 31 December (Roman Catholic Church) or 2 January (Eastern Orthodox Churches)
+
+https://pypi.org/project/spacy-entity-linker/
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.53
+
+Pipelines in spaCy
+
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.54
+
+Pipelines in spaCy (contd.)
+
+Working with pipelines
+Loading a model defines the pipeline to be used in its metadata:
+
+"pipeline": ["tagger", "parser", "ner"]
+
+Processing a text will then apply each component in the pipeline in turn:
+
+doc = nlp.make_doc("This is a sentence")
+for name, proc in nlp.pipeline:
+
+doc = proc(doc)
+
+You can disable components you don’t need:
+
+nlp = spacy.load("en_core_web_sm", disable=["parser"])
+
+And of course add your own components (here at the end):
+
+nlp.add_pipe(my_component, name="My new component", last=True)
+
+See https://spacy.io/usage/processing-pipelines
+
+https://spacy.io/usage/processing-pipelines
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.55
+
+Writing a spaCy component
+
+A simple “info” component
+
+import spacy
+
+def my_component(doc):
+print("After tokenization, this doc has {} tokens.".format(len(doc)))
+print("The part-of-speech tags are:", [token.pos_ for token in doc])
+if len(doc) < 10:
+
+print("This is a pretty short document.")
+return doc
+
+nlp = spacy.load("en_core_web_sm")
+nlp.add_pipe(my_component, name="print_info", last=True)
+print(nlp.pipe_names)
+doc = nlp("This is a sentence.")
+
+Output
+
+[’tagger’, ’parser’, ’ner’, ’print_info’]
+After tokenization, this doc has 5 tokens.
+The part-of-speech tags are: [’DET’, ’AUX’, ’DET’, ’NOUN’, ’PUNCT’]
+This is a pretty short document.
+
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.56
+
+Summary: spaCy Architecture
+
+https://spacy.io/usage/spacy- 101#architecture
+
+https://spacy.io/usage/spacy-101#architecture
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.57
+
+Outline
+
+1 Introduction
+
+2 Natural Language Processing (NLP)
+
+3 Text Mining
+Example: Scientific Literature Mining
+Summary
+
+4 Notes and Further Reading
+
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.58
+
+Text Mining Biomedical Literature for Protein Mutations
+
+Excerpts from PubMed journal PMID:14592457
+
+. . . glutathione S-transferase (GST) fusion proteins in Escherichia
+coli and purified by GSH–agarose affinity chromatography. Mutant
+Q15K-W37R and mutant Q15R-W37R showed comparable activ-
+ity for NAD and NADP with an increase in activity nearly 3fold over
+that of the wild type.
+
+(Orange: Mutation, Red: Enzyme, Blue: Organism, Violet: Impact expression,
+Purple: Protein property, Green: Physical quantity)
+
+What we are looking for?
+
+Impact Mutant Q15K-W37R and mutant Q15R-W37R showed. . .
+an increase in activity 3fold over that of the wild type.
+
+Organism Escherichia coli
+Mutation Q15K/W37R,Q15R/W37R
+Enzyme glutathione S-transferase (GST)
+Protein property activity
+Physical Quantity 3fold
+Impact Expression increase
+
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.59
+
+BRENDA (BRaunschweig ENzyme DAtabase)
+
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.60
+
+Organism Entity Detection
+
+Organism Examples
+
+genus︷ ︸︸ ︷
+Emericella
+
+old genus name︷ ︸︸ ︷
+(Aspergillus)
+
+species︷ ︸︸ ︷
+nidulans︸ ︷︷ ︸
+
+organism mention
+
+genus︷ ︸︸ ︷
+Escherichia
+
+species︷︸︸︷
+coli
+
+strain︷ ︸︸ ︷
+XLl-Blue︸ ︷︷ ︸
+
+organism mention
+
+Finding Organisms: Rule matching
+Priority Pattern
+5 (GENUS) (SPECIES) (SUBSPECIES) (STRAIN)?
+4 (GENUS) ("(")(GENUS)(")") (SPECIES) (STRAINKEYWORD)? (STRAIN) (STRAINKEYWORD)?
+3 (SPECIES) (STRAINKEYWORD) (STRAIN)
+2 (GENUS) (STRAINKEYWORD)? (STRAIN)
+1 (FULLNAME) (STRAINKEYWORD)? (STRAIN) (STRAINKEYWORD)?
+
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.61
+
+Query Interface (https://www.semanticsoftware.info/omm-query)
+“Show me all protein mutations that impacted the protein property affinity”
+
+[Naderi, Nona (2011) Automated Extraction of Protein Mutation Impacts from the Biomedical
+Literature. Masters thesis, Concordia University. https://spectrum.library.concordia.ca/35931/]
+
+https://www.semanticsoftware.info/omm-query
+https://spectrum.library.concordia.ca/35931/
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.62
+
+Summary
+
+Building a text mining system
+
+• We have mature tools&resources to build robust, scalable systems now
+• Prototyping a basic system demo can be done “in hours”
+• Of course, some tasks are still complex R&D problems
+• Cloud APIs are another option (convenient, but added cost and confidentiality
+
+concerns)
+• Many businesses are still not aware of the potentials in analyzing their
+
+documents
+
+Knowledge Worker DocumentsNLP Pipeline
+
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.63
+
+Outline
+
+1 Introduction
+
+2 Natural Language Processing (NLP)
+
+3 Text Mining
+
+4 Notes and Further Reading
+
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.64
+
+Reading Material
+
+Required
+
+• [LHH19, Chapter 11] (Information extraction)
+
+Supplemental
+
+• [PS12, Chapter 6] (Annotation and Adjudication)
+• [JM, Chapter 14] (Dependency Parsing)
+
+
+
+René Witte
+
+Introduction
+Text Mining in Science
+
+Text Mining Applications
+
+Language Technology (LT)
+
+Development Frameworks
+
+Example GATE Pipeline
+
+NLP
+Language Models
+
+Tokenization
+
+Sentence Splitting
+
+Morphology
+
+Part-of-Speech (POS)
+Tagging
+
+Chunking and Parsing
+
+Named Entity Recognition
+
+Entity Linking
+
+Pipelines
+
+Text Mining
+Example: Scientific
+Literature Mining
+
+Summary
+
+Notes and Further
+Reading
+
+9.65
+
+References
+
+[JM] Daniel Jurafsky and James H. Martin.
+Speech and Language Processing.
+Third Edition draft, December 30, 2020.
+https://web.stanford.edu/~jurafsky/slp3/.
+
+[LHH19] Hobson Lane, Cole Howard, and Hannes Max Hapke.
+Natural Language Processing in Action.
+Manning Publications Co., 2019.
+https://concordiauniversity.on.worldcat.org/oclc/1102387045.
+
+[PS12] James Pustejovsky and Amber Stubbs.
+Natural Language Annotation for Machine Learning.
+O’Reilly, 2012.
+https://concordiauniversity.on.worldcat.org/oclc/801812987.
+
+https://web.stanford.edu/~jurafsky/slp3/
+https://concordiauniversity.on.worldcat.org/oclc/1102387045
+https://concordiauniversity.on.worldcat.org/oclc/801812987
+
+	Text Mining
+	Introduction
+	Text Mining in Science
+	Text Mining Applications
+	Language Technology (LT)
+	Development Frameworks
+	Example GATE Pipeline
+
+	Natural Language Processing (NLP)
+	Language Models
+	Tokenization
+	Sentence Splitting
+	Morphology
+	Part-of-Speech (POS) Tagging
+	Chunking and Parsing
+	Named Entity Recognition
+	Entity Linking
+	Pipelines
+
+	Text Mining
+	Example: Scientific Literature Mining
+	Summary
+
+	Notes and Further Reading
+
+

@@ -1,0 +1,186 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    
+    
+    
+    
+    
+- intent: about_course_event_lab_name_link
+  examples: |
+    - What is the name and link for [6](course_event_number) lab of [COMP 474](course)?
+    - What is the name and link for lab [6](course_event_number) of [COMP 474](course)?
+    - Can I get the link and name for [comp747](course) lab [6](course_event_number)?
+
+- intent: about_course_event_lab_content
+  examples: |
+    - what is the content of Lab [2](course_event_number) of [comp 747](course)?
+    - what content is there in [2](course_event_number) lab of [comp 747](course)?
+    - what are all the contents of [comp747](course) lab [6](course_event_number)?
+    
+  
+    
+    
+
+- intent: about_course_event_lecture_name_link
+  examples: |
+    - What is the name and link for [6](course_event_number) lecture of [COMP 474](course)?
+    - What is the name and link for lecture [6](course_event_number) of [COMP 474](course)?
+    - Can I get the link and name for [comp747](course) lecture [6](course_event_number)?
+
+- intent: about_course_event_lecture_content
+  examples: |
+    - What are the contents of [2](course_event_number) lecture of [COMP 6721](course)?
+    - what content is there in lecture [2](course_event_number) of [comp 747](course)?
+    - what are all the contents of [comp747](course) lecture [6](course_event_number)?
+
+- intent: about_course_event_lecture_link_worksheet
+  examples: |
+    - What is the link of worksheet for [6](course_event_number) lecture of [COMP 474](course)?
+    - What is the link of worksheet for lecture [6](course_event_number) of [COMP 474](course)?
+    - Can you please give the link of worksheet for [COMP 474](course) lecture [6](course_event_number)?
+    
+- intent: about_course_event_lecture_name_slide
+  examples: |
+    - What are the names and corresponding slides of all the lectures of [COMP 6741](course)?
+    - What are the names and slides of [COMP 6741](course) all lectures?
+    - Can I please get the slides and names of all the lectures of [comp747](course)?
+    
+- intent: about_course_event_lecture_other
+  examples: |
+    - How many lectures in [COMP 6741](course) have supplementary other material?
+    - other material is given with how many lectures in [comp 747](course)?
+    - what is the number of lectures of [comp 457](course) which provides other material?
+    
+- intent: about_course_event_lecture_reading
+  examples: |
+    - How many supplementary readings does [3](course_event_number) lecture of [COMP 6721](course) has?
+    - what number of readings are provided with lecture [3](course_event_number) of [comp 656](course)?
+    - Lecture [3](course_event_number) of [comp747](course) have how many readings?
+    
+
+
+
+
+- intent: about_course
+  examples: |
+    - what is the [COMP 474](course)?
+    - what is the [COMP 474](course) about?
+    - do you know about [COMP 474](course)?
+    - could you please give me information about [COMP 474](course)?
+    - tell me about [COMP 474](course)
+    - can you tell me about [COMP 474](course)?
+    - what is there in [COMP 474](course)?
+    
+- intent: about_course_event_lab_topics
+  examples: |
+    - which topics are covered in Lab [2](course_event_number) of [comp 747](course)?
+    - which topics are there in [2](course_event_number) lab of [comp 747](course)?
+    - what is taught in lab [2](course_event_number) of [comp 747](course)?
+
+- intent: about_course_event_lecture_topics
+  examples: |
+    - What topic is covered in [5](course_event_number) lecture of [COMP 6741](course)?
+    - which topics are there in lecture [2](course_event_number) of [comp 747](course)?
+    - what is taught in lecture [2](course_event_number) of [comp 747](course)?
+
+- intent: about_course_event_lecture_topic_link
+  examples: |
+    - What is the dbpedia link of the topic covered in [4](course_event_number) lecture of [COMP 6721](course)?
+    - please give the dbpedia link to topic in lecture [4](course_event_number) of [COMP 747](course)?
+    - can i get the dbpedia link of [comp 874](course) lecture [4](course_event_number) topic?
+
+- intent: about_topic
+  examples: |
+    - which courses covers topic [Expert Systems](topic)?
+    - which courses at Concordia teaches [Deep Learning](topic) topic?
+    - Topic [Artificial Intelligence](topic) is taught in which courses?

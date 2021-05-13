@@ -1,0 +1,81 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - about_course
+  - about_course_event_lab_topics
+  - about_course_event_lecture_topics
+  - about_topic
+  - about_course_event_lab_name_link
+  - about_course_event_lab_content
+  - about_course_event_lecture_name_link
+  - about_course_event_lecture_content
+  - about_course_event_lecture_link_worksheet
+  - about_course_event_lecture_name_slide
+  - about_course_event_lecture_other
+  - about_course_event_lecture_reading
+  - about_course_event_lecture_topic_link
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+  
+entities:
+  - course
+  - course_event_number
+  - topic
+
+slots:
+  course:
+    type: any
+    initial_value: "initial"
+    influence_conversation : False
+  course_event_number:
+    type: any
+    initial_value: "initial"
+    influence_conversation : False
+  topic:
+    type: any
+    initial_value: "initial"
+    influence_conversation : False
+
+actions:
+  - action_course_info
+  - action_topic
+  - action_course_event_lab_topics
+  - action_course_event_lecture_topics
+  - action_course_event_lab_name_link
+  - action_course_event_lab_content
+  - action_course_event_lecture_name_link
+  - action_course_event_lecture_content
+  - action_course_event_lecture_link_worksheet
+  - action_course_event_lecture_name_slide
+  - action_course_event_lecture_other
+  - action_course_event_lecture_reading
+  - action_course_event_lecture_topic_link

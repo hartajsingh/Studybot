@@ -1,0 +1,6 @@
+What are the total number of triples in the KB?
+
+SELECT (COUNT(*) as ?totalTriples)
+WHERE {
+  ?subject ?predicate ?object
+}

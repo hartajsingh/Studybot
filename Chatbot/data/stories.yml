@@ -1,0 +1,121 @@
+version: "2.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+  
+- story: happy course info path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: about_course
+  - action: action_course_info
+  
+- story: happy topic info path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: about_topic
+  - action: action_topic
+
+- story: happy course event lab topics path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: about_course_event_lab_topics
+  - action: action_course_event_lab_topics
+
+- story: happy course event lecture topics path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: about_course_event_lecture_topics
+  - action: action_course_event_lecture_topics
+
+- story: happy corse event lab name link path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: about_course_event_lab_name_link
+  - action: action_course_event_lab_name_link
+
+- story: happy course event lab content path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: about_course_event_lab_content
+  - action: action_course_event_lab_content
+
+- story: happy corse event lecture name link path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: about_course_event_lecture_name_link
+  - action: action_course_event_lecture_name_link
+
+- story: happy course event lecture content path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: about_course_event_lecture_content
+  - action: action_course_event_lecture_content
+
+- story: happy course event lecture link worksheet path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: about_course_event_lecture_link_worksheet
+  - action: action_course_event_lecture_link_worksheet
+
+- story: happy course event lecture name slide path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: about_course_event_lecture_name_slide
+  - action: action_course_event_lecture_name_slide
+
+- story: happy course event lecture other path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: about_course_event_lecture_other
+  - action: action_course_event_lecture_other
+
+- story: happy course event lecture reading path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: about_course_event_lecture_reading
+  - action: action_course_event_lecture_reading
+
+- story: happy course event lecture topic dbpedia link path
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: about_course_event_lecture_topic_link
+    - action: action_course_event_lecture_topic_link

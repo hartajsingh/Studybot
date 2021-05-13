@@ -1,0 +1,217 @@
+@prefix ex:  <http://example.org/> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix teach: <http://linkedscience.org/teach/ns#> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbp: <http://dbpedia.org/property/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+
+dbo:University
+	rdfs:label "University"@en ;
+	rdfs:comment "An educational institute for higher education"@en .
+	
+	
+teach:Course
+	rdfs:label "Course"@en ;
+	rdfs:comment "Course taught at a university"@en .
+	
+	
+teach:Lecture
+	rdfs:label "Lecture"@en ;
+	rdfs:comment "Lecture about a particular topic of the course"@en .
+	
+	
+ex:Lab
+	a rdfs:Class ;
+	rdfs:subClassOf rdfs:Lecture ;
+	rdfs:label "Lab"@en ;
+	rdfs:comment "Lab corresponding to a particular lecture"@en .	
+	
+	
+ex:Topic
+	a rdfs:Class ;
+	rdfs:label "Topic"@en ;
+	rdfs:comment "Topic covered in the course and lectures"@en .
+	
+	
+ex:Content
+	a rdfs:Class ;
+	rdfs:label "Study Material"@en ;
+	rdfs:comment "The study material to be discussed in the lecture or lab"@en .
+	
+	
+ex:Slide
+	a rdfs:Class ;
+	rdfs:subClassOf ex:Content ;
+	rdfs:label "Lecture Slide"@en ;
+	rdfs:comment "The slide to be discussed in the lecture"@en .
+	
+	
+ex:Worksheet
+	a rdfs:Class ;
+	rdfs:subClassOf ex:Content ;
+	rdfs:label "Lecture Worksheet"@en ;
+	rdfs:comment "The worksheet to be solved in the lecture"@en .
+	
+	
+ex:Reading
+	a rdfs:Class ;
+	rdfs:subClassOf ex:Content ;
+	rdfs:label "Lecture Reading"@en ;
+	rdfs:comment "Supplementary reading for the lecture"@en .
+	
+	
+ex:OtherMaterial
+	a rdfs:Class ;
+	rdfs:subClassOf ex:Content ;
+	rdfs:label "Other Lecture Content"@en ;
+	rdfs:comment "Other content related to lecture such as videos, images etc"@en .
+	
+	
+ex:taughtAt
+	a rdf:property ;
+	rdfs:label "Taught At"@en ;
+	rdfs:comment "The university at which the course is taught"@en ;
+	rdfs:domain teach:Course ;
+	rdfs:range dbo:University .
+	
+	
+ex:hasTopic
+	a rdf:property ;
+	rdfs:label "Course Topic"@en ;
+	rdfs:comment "Topics covered in the course"@en ;
+	rdfs:domain teach:Course;
+	rdfs:range ex:Topic .
+	
+	
+ex:hasLecture
+	a rdf:property ;
+	rdfs:label "Has Lecture"@en ;
+	rdfs:comment "Link the course with the lecture"@en ;
+	rdfs:domain teach:Course;
+	rdfs:range teach:Lecture .
+	
+	
+ex:hasLab
+	a rdf:property ;
+	rdfs:label "Has Lab"@en ;
+	rdfs:comment "Link the lab with the lecture"@en ;
+	rdfs:domain teach:Lecture;
+	rdfs:range ex:Lab .
+	
+	
+ex:topicCovered
+	a rdf:property ;
+	rdfs:label "Lecture Topic"@en ;
+	rdfs:comment "The topic covered in the lecture"@en ;
+	rdfs:domain ex:Slide ;
+	rdfs:domain ex:Worksheet ;
+	rdfs:domain ex:Reading ;
+	rdfs:domain ex:OtherMaterial ;
+	rdfs:range ex:Topic .
+	
+	
+ex:hasSlide
+	a rdf:property ;
+	rdfs:label "Slides"@en ;
+	rdfs:comment "The lecture or lab slides"@en ;
+	rdfs:domain teach:Lecture ;
+	rdfs:domain ex:Lab ;
+	rdfs:range ex:Slide .
+	
+
+ex:hasWorksheet
+	a rdf:property ;
+	rdfs:label "Lecture Worksheets"@en ;
+	rdfs:comment "The lecture worksheets"@en ;
+	rdfs:domain teach:Lecture ;
+	rdfs:range ex:Worksheet .
+	
+	
+ex:hasReading
+	a rdf:property ;
+	rdfs:label "Lecture Readings"@en ;
+	rdfs:comment "The lecture readings"@en ;
+	rdfs:domain teach:Lecture ;
+	rdfs:range ex:Reading .
+	
+	
+ex:hasOtherMaterial
+	a rdf:property ;
+	rdfs:label "Other Material"@en ;
+	rdfs:comment "The lecture other material"@en ;
+	rdfs:domain teach:Lecture ;
+	rdfs:range ex:OtherMaterial .
+	
+	
+ex:hasContent
+	a rdf:property ;
+	rdfs:label "Content"@en ;
+	rdfs:comment "The lecture or lab content"@en ;
+	rdfs:domain teach:Lecture ;
+	rdfs:domain ex:Lab ;
+	rdfs:range ex:Content .
+	
+	
+ex:event
+	a rdf:property ;
+	rdfs:label "Course Event"@en ;
+	rdfs:comment "The course event"@en ;
+	rdfs:domain teach:Lecture ;
+	rdfs:domain ex:Lab ;
+	rdfs:range rdfs:Literal .
+	
+	
+ex:resource
+	a rdf:property ;
+	rdfs:label "Resource"@en ;
+	rdfs:comment "The course resource"@en ;
+	rdfs:domain ex:Slide ;
+	rdfs:domain ex:Worksheet ;
+	rdfs:range rdfs:Literal .
+	
+
+dcterms:subject
+	rdfs:label "Course Subject"@en ;
+	rdfs:comment "The subject of the course i.e. abbrevaiated department name"@en ;
+	rdfs:domain teach:Course ;
+	rdfs:range rdfs:Literal .
+	
+		
+teach:courseTitle
+	rdfs:label "Course Name"@en ;
+	rdfs:comment "The name of the course"@en ;
+	rdfs:range rdfs:Literal .
+	
+	
+teach:courseDescription
+	rdfs:label "Course Description"@en ;
+	rdfs:comment "The description of the course"@en ;
+	rdfs:range rdfs:Literal .
+	
+
+ex:outline
+	a rdf:property ;
+	rdfs:label "Course Outline"@en ;
+	rdfs:comment "The outline of the course, if available"@en ;
+	rdfs:domain teach:Course ;
+	rdfs:range foaf:Document .
+	
+	
+dcterms:identifier
+	rdfs:comment "A unique number to identify a resource"@en ;
+	rdfs:domain teach:Lecture ;
+	rdfs:domain ex:Lab ;
+	rdfs:domain teach:Course .
+	
+	
+foaf:page
+	rdfs:label "Link"@en ;
+	rdfs:comment "Link entities to a web page" .
+		
+		
+dbp:name
+	rdfs:label "Name"@en ;
+	rdfs:comment "Name of an entity"@en .

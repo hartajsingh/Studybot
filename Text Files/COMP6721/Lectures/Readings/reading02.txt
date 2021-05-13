@@ -1,0 +1,2268 @@
+
+    
+
+    
+
+        
+
+    
+        
+                
+                
+                    
+
+                
+
+                    
+                        Stack Overflow
+                    
+
+
+
+        
+
+
+            	
+                        About
+                    
+	
+                    
+                        Products
+                    
+                
+	
+                        For Teams
+                    
+
+
+            
+                
+
+                	
+                        
+                            Stack Overflow
+                            Public questions & answers
+                        
+                    
+	
+                        
+                            Stack Overflow for Teams
+                            Where developers & technologists share private knowledge with coworkers
+                        
+                    
+	
+                        
+                            Jobs
+                            Programming & related technical career opportunities
+                        
+                    
+	
+                        
+                            Talent
+                            Recruit tech talent & build your employer brand
+                        
+                    
+	
+                        
+                            Advertising
+                            Reach developers & technologists worldwide
+                        
+                    
+	
+                        About the company
+                    
+
+
+            
+
+
+            
+                    
+                        
+                        
+                        
+    
+
+    
+        
+            Loading…
+
+        
+
+    
+
+
+    
+    
+
+
+    
+
+
+
+                    
+
+            
+
+        
+        
+
+	
+	
+                            Log in
+                            Sign up
+
+            
+	
+            
+
+    
+        
+            
+                current community
+            
+
+        
+
+        
+            	
+                            
+                
+        
+
+        
+            Stack Overflow
+        
+    
+
+    
+
+    
+            help
+            chat
+    
+
+
+                    
+	
+                            
+        
+    
+
+
+                            
+        
+
+        
+            Meta Stack Overflow
+        
+    
+
+                    
+
+
+        
+
+
+        
+            
+your communities            
+
+
+        
+
+        
+
+                
+Sign up or log in to customize your list.                
+
+        
+
+
+        
+            more stack exchange communities
+            
+
+            company blog
+        
+
+        
+                
+
+        
+        
+    
+
+
+    
+
+
+
+    
+
+
+
+    
+
+
+
+            
+
+        
+    
+
+    
+        
+            Join Stack Overflow to learn, share knowledge, and build your career.
+
+        
+
+
+        
+            
+                    Sign up with email
+                    Sign up
+                
+            
+                
+                    
+                    Sign up with Google
+                
+                
+                    
+                    Sign up with GitHub
+                
+                
+                    
+                    Sign up with Facebook
+                
+                
+        
+
+
+        
+
+            
+
+            
+
+            
+            
+
+            
+                
+            
+
+        
+
+        
+    
+
+
+
+
+
+
+
+
+    
+            
+
+
+
+    
+        
+            	
+            
+                    
+                        
+                            Home
+                        
+
+                    
+
+            
+        
+	
+                    	Public
+	
+            
+                    Questions
+            
+        
+	
+            
+                    
+                        
+                            Tags
+                        
+
+                    
+
+            
+        
+	
+            
+                    
+                        
+                            Users
+                        
+
+                    
+
+            
+        
+	Find a Job
+	
+            
+                    
+                        
+                            Jobs
+                        
+
+                    
+
+            
+        
+	
+            
+                    
+                        
+                            Companies
+                        
+
+                    
+
+            
+        
+
+
+                
+	
+                        
+
+
+    Teams
+
+
+    
+        Stack Overflow for Teams
+        – Collaborate and share knowledge with a private group.
+        
+        
+
+        Create a free Team
+        What is Teams?
+    
+
+
+
+
+                                
+	
+                                    Teams
+
+                                    
+                                        
+                                            What’s this?
+                                        
+
+                                    
+
+                                
+	
+                                    
+                                        
+                                            
+                                                
+                                                    
+                                                
+
+                                                
+                                            
+
+                                            
+                                                Create free Team
+                                            
+
+                                        
+
+                                    
+                                
+
+
+                    
+            
+        
+    
+
+
+
+
+        
+            
+
+
+            
+                Teams
+
+                Q&A for work
+
+                Connect and share knowledge within a single location that is structured and easy to search.
+
+                
+                    Learn more
+                
+            
+
+
+            
+                
+            
+
+        
+
+
+
+
+
+
+
+        
+
+            
+
+    
+
+
+    
+
+        
+
+            
+                        Consistent and Admissible Heuristics
+
+                
+                        
+        Ask Question
+    
+
+                
+
+            
+
+            
+                    
+                        Asked
+                        7 years, 4 months ago
+                    
+
+                    
+                        Active
+                        2 months ago
+                    
+
+                    
+                        Viewed
+                        41k times
+                    
+
+            
+
+            
+
+                
+
+    
+
+    
+
+    
+
+
+
+
+    
+        
+            
+        
+        35
+
+        
+
+        
+            
+            7
+
+        
+    
+
+    
+        
+
+
+
+        
+
+
+        
+
+
+    
+    
+                
+Any consistent heuristic is also admissible. But when is a heuristic admissible but not consistent (monotone)?
+
+
+Please provide an example in which this is the case.
+
+    
+
+
+        
+            
+                
+                    search artificial-intelligence a-star heuristics 
+                
+
+            
+
+        
+
+
+    
+        
+            
+                
+
+
+    
+
+        
+            Share
+        
+
+
+
+
+        
+            
+                Follow
+            
+        
+
+
+
+
+
+    
+
+    
+
+
+
+
+            
+
+
+                
+
+    
+        edited May 9 '15 at 2:36
+    
+
+    
+        
+
+    
+
+    
+        seaotternerd
+        
+            5,78222 gold badges4040 silver badges5858 bronze badges
+        
+
+    
+
+
+
+                
+
+            
+                
+    
+        asked Dec 11 '13 at 10:00
+    
+
+    
+        
+
+    
+
+    
+        RoarGRoarG
+        
+            66311 gold badge66 silver badges2020 bronze badges
+        
+
+    
+
+
+
+
+
+            
+
+        
+
+    
+
+    
+
+
+
+
+
+
+             
+    
+        
+            
+
+	    
+
+
+        
+                    Add a comment
+                 | 
+            
+        
+         
+    
+
+    
+
+
+
+
+
+
+    
+
+    
+
+
+
+
+                
+
+                    
+                    
+                        
+                            
+                                
+                                        3 Answers
+                                    3
+                                
+
+                            
+
+                            
+                                
+        
+            Active
+        
+            Oldest
+        
+            Votes
+
+
+
+                            
+
+                        
+
+                            
+                    
+
+
+
+                                          
+
+
+    
+        
+            
+        
+        38
+
+        
+
+    
+            
+                
+                    
+                
+
+            
+
+
+    
+        
+
+
+
+        
+
+
+        
+
+
+    
+    
+As Russel and Norvig point out in Artificial Intelligence: A Modern Approach (the most commonly used AI textbook) it is challenging to come up with a heuristic that is admissible but not consistent. 
+
+
+Obviously, you can select values for nodes in a graph such that the heuristic they represent is admissible but not consistent. This paper by Felner et al has a nice example of the two ways that this is possible, but it's a little dense, so I'll summarize:
+
+
+ 
+
+
+	This heuristic is inconsistent at c1 because it is giving a lower (i.e. less informative) lower bound on the cost to get to the goal than its parent node is. The cost estimate of getting to the goal through the parent node is at least 10 (because the cost of the path to p is 5 and the heuristic estimate at p is also 5). The cost estimate for getting to the goal through c1, however, is just 8 (cost of parent (5), plus cost of path from parent (1), plus heuristic estimate at c1 (2)).
+	Since this graph is undirected, this heuristic is also inconsistent at c2, because going from c2 to p has the same problem as above.
+
+
+
+Felner et al also provide a few concrete examples of an admissible but inconsistent heuristic. Consider the 8-puzzle problem:
+
+
+ 
+
+
+In this puzzle there are 8 sliding tiles numbered 1-8, and one empty space. The tiles start out out of order (as in the image on the left). The goal is to get the puzzle into the state shown above on the right exclusively by sliding tiles into the empty space. The classic heuristic for this problem (Manhattan distance of each tile to the location where it is supposed to be) is admissible and consistent. 
+
+
+However, you could come up with a different heuristic. Maybe you just want to look at Manhattan distance (i.e. the number of squares away) of the 1, the 2, and the 3 to the locations in which they are supposed to be in the goal state. The heuristic, while less informative than Manhattan distance of all tiles, is still admissible and consistent. 
+
+
+But let's say that you choose an additional group of squares, perhaps 5, 6, and 7. And then let's say that the way you calculate the heuristic at each node is by randomly selecting one of those sets (1,2, and 3) or (5, 6, and 7) and computing their Manhattan distance to their goal locations. This heuristic is still admissible - it can only ever underestimate or match the number of moves needed to get to the goal state. However, it is no longer consistent - there isn't a clear relationship between the heuristic estimates at each node.
+
+    
+
+    
+        
+            
+            
+                
+
+
+    
+
+        
+            Share
+        
+
+
+
+
+        
+            
+                Follow
+            
+        
+
+
+
+
+
+    
+
+    
+
+
+
+
+            
+
+            
+
+    
+        edited May 8 '16 at 3:05
+    
+
+    
+        
+    
+
+    
+        
+        
+            
+        
+
+    
+
+
+
+            
+
+
+
+            
+                
+    
+        answered Dec 11 '13 at 23:47
+    
+
+    
+        
+
+    
+
+    
+        seaotternerdseaotternerd
+        
+            5,78222 gold badges4040 silver badges5858 bronze badges
+        
+
+    
+
+
+
+
+
+            
+
+        
+
+    
+
+    
+
+
+
+
+
+
+            1 
+    
+        
+            	
+        
+            
+                    8
+            
+
+        
+
+        
+            
+                
+                In fact, Felner et al write in section 6: "As illustrated in the quote from Artificial Intelligence: A Modern Approach [38] given earlier, there is a perception that inconsistent admissible heuristics are hard to create. However, it turns out that this is not true." - for the rest, great answer, thanks.
+                
+– user1544337
+                Oct 18 '14 at 13:17
+                        
+                            
+                        
+            
+
+        
+
+    
+
+
+	    
+
+
+        
+                    Add a comment
+                 | 
+            
+        
+         
+    
+
+    
+
+
+
+
+    
+
+    
+
+
+
+                                          
+
+
+    
+        
+            
+        
+        2
+
+        
+
+    
+            
+                
+                    
+                
+
+            
+
+
+    
+        
+
+
+
+        
+
+
+        
+
+
+    
+    
+Long dead, but I'll give my two cents anyway. I think by far the easiest way to think of this is that an admissible heuristic says that you can't overshoot when getting to a particular defined goal node, while a consistent heuristic says that you can't overshoot when getting to ANY node. This makes the relationships clear: since the goal node is some node, a consistent heuristic is admissible. But since admissible only guarantees this property for one node, admissible does not imply consistency. 
+
+    
+
+    
+        
+            
+            
+                
+
+
+    
+
+        
+            Share
+        
+
+
+
+
+        
+            
+                Follow
+            
+        
+
+
+
+
+
+    
+
+    
+
+
+
+
+            
+
+            
+
+    
+        edited Jan 12 '15 at 13:50
+    
+
+    
+        
+
+    
+
+    
+        kenor
+        
+            1,76711 gold badge1515 silver badges2727 bronze badges
+        
+
+    
+
+
+
+            
+
+
+
+            
+                
+    
+        answered Oct 30 '14 at 4:55
+    
+
+    
+        
+
+    
+
+    
+        Sam BobelSam Bobel
+        
+            1,5441212 silver badges2222 bronze badges
+        
+
+    
+
+
+
+
+
+            
+
+        
+
+    
+
+    
+
+
+
+
+
+
+            3 
+    
+        
+            	
+        
+            
+                    7
+            
+
+        
+
+        
+            
+                
+                actually. this doesn't make sense. an admissible, not-consistent heuristic still can't "overshoot" for any node, where "overshoot" means the estimated cost is greater than the actual cost. consistency is concerned with the monotonicity of the heuristic's own estimates, not with the absolute, true cost, which is with what admissibility is concerned. it just happens that if for every step a heuristic is consistent, over k steps, it cannot overestimate a node's cost, and therefore consistent is always admissible.
+                
+– ealfonso
+                Mar 3 '15 at 17:02
+                        
+                            
+                        
+            
+
+        
+
+    
+	
+        
+            
+            
+
+        
+
+        
+            
+                
+                In addition to @ealfonso's comment, heuristic is the estimated cost of reaching a goal from an arbitrary node, not the cost of reaching an arbitrary node in which case you would need two parameters, a start node and an end node. In the former case, which is what is commonly used, it doesn't make sense to talk about estimated costs to arbitrary nodes.
+                
+– xyz
+                Sep 7 '20 at 23:35
+            
+
+        
+
+    
+	
+        
+            
+            
+
+        
+
+        
+            
+                
+                I think the explanation is fine. Overshoots here means that the new total path cost should not be higher than it has to be, meaning you will always reach the most promising node.
+                
+– Kataran
+                Dec 24 '20 at 10:02
+            
+
+        
+
+    
+
+
+	    
+
+
+        
+                    Add a comment
+                 | 
+            
+        
+         
+    
+
+    
+
+
+
+                                          
+
+
+    
+        
+            
+        
+        2
+
+        
+
+    
+            
+                
+                    
+                
+
+            
+
+
+    
+        
+
+
+
+        
+
+
+        
+
+
+    
+    
+It is best to think of a consistent heuristic as an admissible heuristic which obeys the triangle inequality:
+
+Cost(a -> c) <= Cost(a -> b) + Cost(b -> c)
+
+
+for any three nodes a, b and c in the search space, with the understanding that the cost is computed using the actual cost between adjacent nodes and using the heuristic otherwise.
+
+    
+
+    
+        
+            
+            
+                
+
+
+    
+
+        
+            Share
+        
+
+
+
+
+        
+            
+                Follow
+            
+        
+
+
+
+
+
+    
+
+    
+
+
+
+
+            
+
+            
+
+    
+        edited Feb 18 at 22:42
+    
+
+    
+        
+    
+
+    
+        
+        
+            
+        
+
+    
+
+
+
+            
+
+
+
+            
+                
+    
+        answered Aug 19 '20 at 11:50
+    
+
+    
+        
+
+    
+
+    
+        Rabih KodeihRabih Kodeih
+        
+            8,5221010 gold badges4444 silver badges5454 bronze badges
+        
+
+    
+
+
+
+
+
+            
+
+        
+
+    
+
+    
+
+
+
+
+
+
+             
+    
+        
+            
+
+	    
+
+
+        
+                    Add a comment
+                 | 
+            
+        
+         
+    
+
+    
+
+
+
+
+                        
+                            
+                                
+                                
+                                
+                                
+                                    Your Answer
+                                
+
+                                    
+
+    
+
+
+
+
+
+
+        
+            
+                
+
+                
+                    
+                        
+                    
+
+                    
+
+                
+
+            
+
+        
+
+
+    
+    
+        Thanks for contributing an answer to Stack Overflow!
+	Please be sure to answer the question. Provide details and share your research!
+
+But avoid …
+	Asking for help, clarification, or responding to other answers.
+	Making statements based on opinion; back them up with references or personal experience.
+
+To learn more, see our tips on writing great answers.
+
+    
+
+    
+        
+    
+
+
+
+
+    
+        Draft saved
+
+        Draft discarded
+
+    
+
+
+
+            
+
+            
+
+
+        
+            
+            
+        
+
+
+
+
+
+
+                                
+                                                
+                
+                    
+                        Sign up or log in
+
+                        
+                        
+                             Sign up using Google
+                        
+
+                        
+                             Sign up using Facebook
+                        
+
+                        
+                             Sign up using Email and Password
+                        
+
+                    
+
+                    
+                    
+                    Submit
+                    
+                                Post as a guest
+
+            
+                
+                    Name
+                    
+                        
+                    
+
+                
+
+            
+
+            
+                
+                    
+                        
+                            Email
+                            Required, but never shown
+
+                        
+
+                    
+
+                    
+                        
+                    
+
+                
+
+            
+
+
+                    
+
+                
+
+            
+
+            
+            
+                        Post as a guest
+
+            
+                
+                    Name
+                    
+                        
+                    
+
+                
+
+            
+
+            
+                
+                    
+                        
+                            Email
+                            Required, but never shown
+
+                        
+
+                    
+
+                    
+                        
+                    
+
+                
+
+            
+
+
+            
+
+
+                                
+
+
+                                    
+                                        
+Post Your Answer                                        
+                                        
+                                            Discard
+                                        
+                                            
+                                                By clicking “Post Your Answer”, you agree to our terms of service, privacy policy and cookie policy
+                                            
+
+                                    
+
+                                    
+
+                            
+
+
+
+
+                            
+Not the answer you're looking for? Browse other questions tagged search artificial-intelligence a-star heuristics  or ask your own question.                            
+
+                
+
+            
+
+            
+                    
+
+                
+
+    
+
+                        The Overflow Blog
+                    
+
+        	
+            
+            
+
+            
+                Podcast 332: Non-fungible Talking
+            
+
+        
+	
+            
+            
+
+            
+                The Loop: Our Community & Public Platform Roadmap for Q2 2021
+            
+
+        
+
+
+                        Featured on Meta
+                    
+
+        	
+            
+
+            
+
+            
+                Stack Overflow for Teams is now free for up to 50 users, forever
+            
+
+        
+	
+            
+
+            
+
+            
+                New onboarding for review queues
+            
+
+        
+	
+            
+
+            
+
+            
+                Outdated Answers: results from use-case survey
+            
+
+        
+	
+            
+
+            
+
+            
+                Downvotes Survey results
+            
+
+        
+
+
+
+
+
+
+
+    
+
+    
+
+
+
+
+    
+
+    
+
+
+
+
+                    
+	Linked
+
+	
+            
+				
+					21
+
+				
+				What is the difference between monotonicity and the admissibility of a heuristic?
+			
+
+            
+				
+					10
+
+				
+				Can someone give me an example of admissible heuristic that is not consistent?
+			
+
+            
+				
+					4
+
+				
+				Intuitively understanding why consistency is required for optimality in A* search?
+			
+
+            
+				
+					1
+
+				
+				Monotonicity and A*. Is it optimal?
+			
+
+	
+
+
+
+
+
+                    
+                        Related
+
+                        
+                                
+                                    
+                                        21
+
+                                    
+                                    What is the difference between monotonicity and the admissibility of a heuristic?
+                                
+
+                                
+                                    
+                                        20
+
+                                    
+                                    A* admissible heuristics on a grid with teleporters?
+                                
+
+                                
+                                    
+                                        5
+
+                                    
+                                    Why isn't my heuristic for the A* algorithm admissible?
+                                
+
+                                
+                                    
+                                        3
+
+                                    
+                                    Usage of admissible and consistent heuristics in A*
+                                
+
+                                
+                                    
+                                        1966
+
+                                    
+                                    What is the optimal algorithm for the game 2048?
+                                
+
+                                
+                                    
+                                        6
+
+                                    
+                                    Why do admissable heuristics guarantee optimality?
+                                
+
+                                
+                                    
+                                        6
+
+                                    
+                                    Admissible Heuristic Manhattan Distance
+                                
+
+                                
+                                    
+                                        10
+
+                                    
+                                    Can someone give me an example of admissible heuristic that is not consistent?
+                                
+
+                                
+                                    
+                                        2
+
+                                    
+                                    Admissible heuristic function
+                                
+
+                                
+                                    
+                                        9
+
+                                    
+                                    Why does A* with admissible non consistent heuristic find non optimal solution?
+                                
+
+                        
+
+                    
+
+
+                
+    
+        
+            Hot Network Questions
+        
+    
+
+    	
+                
+
+                    How can one wish someone a "good night" when they sleep during the day?
+                
+
+            
+	
+                
+
+                    When shall those who hunger and thirst for righteousness be satisfied? Matthew 5:6
+                
+
+            
+	
+                
+
+                    What is the source of the given hadith?
+                
+
+            
+	
+                
+
+                    How to create a new column in SELECT CASE when string contains Arabic words?
+                
+
+            
+	
+                
+
+                    With all the rain Seattle gets, why is widespread flooding relatively rare?
+                
+
+            
+	
+                
+
+                    Why does my cat shed so much?
+                
+
+            
+	
+                
+
+                    Linebreak in multirow using tabularx
+                
+
+            
+	
+                
+
+                    Why does the Java compiler 11 use invokevirtual to call private methods?
+                
+
+            
+	
+                
+
+                    Allowable Discrimination For Jobs
+                
+
+            
+	
+                
+
+                    Can music be arrhythmic?
+                
+
+            
+	
+                
+
+                    Duplicates in "n × hamming weight of n" sequence
+                
+
+            
+	
+                
+
+                    No canonical isomorphism
+                
+
+            
+	
+                
+
+                    Simulate bitmap mode in photoshop for e-ink photo preparation
+                
+
+            
+	
+                
+
+                    Does a character taking the Ready action perceive time?
+                
+
+            
+	
+                
+
+                    Were kamikaze pilots an effective strategy for Japan?
+                
+
+            
+	
+                
+
+                    Time complexity O(m+n) Vs O(n)
+                
+
+            
+	
+                
+
+                    Help me get the day of the week correct
+                
+
+            
+	
+                
+
+                    Understanding \add@unicode@accent and renewing it for conjoining diacritics
+                
+
+            
+	
+                
+
+                    What kind of tools are available to an ATC handling traffic in the terminal airspace to predict aircraft trajectories?
+                
+
+            
+	
+                
+
+                    Could an airliner with only one functioning engine recover from a stall?
+                
+
+            
+	
+                
+
+                    Does tuning music to A = 432 Hz versus A = 440 Hz have a measurable effect on listeners?
+                
+
+            
+	
+                
+
+                    What is the max current that can be drained from I/O port's VCC pin (pin4 - 5 V)
+                
+
+            
+	
+                
+
+                    How to skip over a long period of time
+                
+
+            
+	
+                
+
+                    Why do white supremacists use the term "Anglo Saxon values"?
+                
+
+            
+
+
+
+        
+            more hot questions
+        
+
+
+
+                            
+        
+            
+            Question feed
+        
+    
+
+    
+        
+            
+                Subscribe to RSS
+            
+
+            
+                
+                    
+                        Question feed
+                        To subscribe to this RSS feed, copy and paste this URL into your RSS reader.
+
+                    
+                
+
+                
+                    
+                    
+                
+
+            
+
+            
+                
+            
+        
+
+    
+
+            
+
+    
+
+
+
+
+
+
+
+
+
+        
+
+    
+
+
+        
+
+
+            
+        
+                
+                    
+                    
+                
+
+            
+                    
+                        Stack Overflow
+
+                        	Questions
+	Jobs
+	Developer Jobs Directory
+	Salary Calculator
+	Help
+	Mobile
+
+
+                    
+
+                    
+                        Products
+
+                        	Teams
+	Talent
+	Advertising
+	Enterprise
+
+
+                    
+
+                
+                    Company
+
+                    	About
+	Press
+	Work Here
+	Legal
+	Privacy Policy
+	Terms of Service
+	Contact Us
+	Cookie Settings
+	Cookie Policy
+
+
+                
+
+                
+                    
+                    
+                        Stack Exchange
+ Network
+
+                        	Technology
+	Life / Arts
+	Culture / Recreation
+	Science
+	Other
+
+
+                    
+
+                
+
+                
+                        
+        	Stack Overflow
+	Server Fault
+	Super User
+	Web Applications
+	Ask Ubuntu
+	Webmasters
+	Game Development
+
+
+	TeX - LaTeX
+	Software Engineering
+	Unix & Linux
+	Ask Different (Apple)
+	WordPress Development
+	Geographic Information Systems
+	Electrical Engineering
+
+
+	Android Enthusiasts
+	Information Security
+	Database Administrators
+	Drupal Answers
+	SharePoint
+	User Experience
+	Mathematica
+
+
+	Salesforce
+	ExpressionEngine® Answers
+	Stack Overflow em Português
+	Blender
+	Network Engineering
+	Cryptography
+	Code Review
+
+
+	Magento
+	Software Recommendations
+	Signal Processing
+	Emacs
+	Raspberry Pi
+	Stack Overflow на русском
+	Code Golf
+
+
+	Stack Overflow en español
+	Ethereum
+	Data Science
+	Arduino
+	Bitcoin
+	Software Quality Assurance & Testing
+	Sound Design
+
+
+	Windows Phone
+	
+                    
+                        
+                            more (28)
+                        
+                    
+                
+
+
+    
+
+    
+        	Photography
+	Science Fiction & Fantasy
+	Graphic Design
+	Movies & TV
+	Music: Practice & Theory
+	Worldbuilding
+	Video Production
+
+
+	Seasoned Advice (cooking)
+	Home Improvement
+	Personal Finance & Money
+	Academia
+	Law
+	Physical Fitness
+	Gardening & Landscaping
+
+
+	Parenting
+	
+                    
+                        
+                            more (10)
+                        
+                    
+                
+
+
+    
+
+    
+        	English Language & Usage
+	Skeptics
+	Mi Yodeya (Judaism)
+	Travel
+	Christianity
+	English Language Learners
+	Japanese Language
+
+
+	Chinese Language
+	French Language
+	German Language
+	Biblical Hermeneutics
+	History
+	Spanish Language
+	Islam
+
+
+	Русский язык
+	Russian Language
+	Arqade (gaming)
+	Bicycles
+	Role-playing Games
+	Anime & Manga
+	Puzzling
+
+
+	Motor Vehicle Maintenance & Repair
+	Board & Card Games
+	Bricks
+	Homebrewing
+	Martial Arts
+	The Great Outdoors
+	Poker
+
+
+	Chess
+	Sports
+	
+                    
+                        
+                            more (16)
+                        
+                    
+                
+
+
+    
+
+    
+        	MathOverflow
+	Mathematics
+	Cross Validated (stats)
+	Theoretical Computer Science
+	Physics
+	Chemistry
+	Biology
+
+
+	Computer Science
+	Philosophy
+	Linguistics
+	Psychology & Neuroscience
+	Computational Science
+	
+                    
+                        
+                            more (10)
+                        
+                    
+                
+
+
+    
+
+    
+        	Meta Stack Exchange
+	Stack Apps
+	API
+	Data
+
+
+    
+
+
+                
+
+            
+            
+                	Blog
+	Facebook
+	Twitter
+	LinkedIn
+	Instagram
+
+
+
+                
+site design / logo © 2021 Stack Exchange Inc; user contributions licensed under cc by-sa.                    rev 2021.4.23.39140
+                
+
+            
+
+        
+
+
+    
+
+            
+    
+        Stack Overflow works best with JavaScript enabled
+            
+        
+
+    
+
+
+            
+
+        
+                
+                    
+                        
+                        
+                    
+                    
+                        Your privacy
+                    
+
+                    
+                        By clicking “Accept all cookies”, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our Cookie Policy.
+                    
+
+                    
+                        
+                            Accept all cookies
+                        
+
+                        
+                            Customize settings
+                        
+                    
+
+                
+
+    
+
+    
+
+    
+
+     
+
+    
+
+
+    
+    

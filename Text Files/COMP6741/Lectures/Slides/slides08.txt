@@ -1,0 +1,2647 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.1
+
+Lecture 8
+Intelligent Agents
+COMP 474/6741, Winter 2021
+
+René Witte
+Department of Computer Science
+
+and Software Engineering
+Concordia University
+
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.2
+
+Outline
+
+1 Introduction
+
+2 Search-Based Bots
+
+3 Pattern-Matching Bots
+
+4 Grounding-Based Bots
+
+5 Chatbot Design
+
+6 Notes and Further Reading
+
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.3
+
+Intelligent Conversational Agents
+
+• A software program that can interpret and
+respond to statements made by users in a
+natural language
+
+• Different types of chatbots
+• Generic vs. Goal-oriented
+• Retrieval vs. Generative (Deep Learning)
+
+• Similar architecture, different stacks
+
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.4
+
+Siri (2009)
+
+https://tomgruber.org/writing/semtech09.htm
+
+https://tomgruber.org/writing/semtech09.htm
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.5
+
+Siri Presentation
+
+https://vimeo.com/5424527
+
+https://vimeo.com/5424527
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.6
+
+The Chatbots Landscape
+
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.7
+
+Chatbot Approaches
+
+Modern approaches
+
+Pattern matching: Regex matching and response templates (canned responses)
+Grounding: Knowledge graphs and inference on those graphs
+Search: Text retrieval
+Generative: Statistics and machine learning
+
+Hybrid approaches
+Using multiple (or all four) techniques in one bot
+
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.8
+
+Chatbot Applications
+
+Examples
+
+Question answering: Google Search, Alexa, Siri, Watson
+Virtual assistants: Google Assistant, Alexa, Siri, MS paperclip
+Conversational: Google Assistant, Google Smart Reply, Mitsuki Bot
+Marketing: Twitter bots, blogger bots, Facebook bots, Google Search, Google
+
+Assistant, Alexa, Allo
+Customer service: Storefront bots, technical support bots
+Community management: Bonusly, Slackbot
+Therapy: Woebot, Wysa, YourDost, Siri, Allo
+
+
+
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.10
+
+Chatbot techniques used for some example applications
+
+Copyright 2019 by Manning Publications Co., [LHH19]
+
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.11
+
+Chatbot recirculating (recurrent) pipeline
+
+Copyright 2019 by Manning Publications Co., [LHH19]
+
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.12
+
+Marketing Chatbots
+
+Bots promoting movies, TV shows, video games, . . .
+
+• HBO promoted “Westworld” with “Aeden”
+• Sony promoted “Resident Evil” with “Red Queen”
+• Disney promoted “Zootopia” with “Officer Judy Hopps”
+• Universal promoted “Unfriended” with “Laura Barnes”
+• Activision promoted “Call of Duty” with “Lt. Reyes”
+
+https://venturebeat.com/2016/05/03/call-of-duty-infinite-warfares-first-victory-6m-bot-messages-on-facebook/
+
+https://venturebeat.com/2016/05/03/call-of-duty-infinite-warfares-first-victory-6m-bot-messages-on-facebook/
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.13
+
+Leena.ai
+HR chatbot answering employees questions
+
+https://techcrunch.com/2018/06/29/leena-ai-builds-hr-chat-bots-to-answer-policy-questions-automatically/
+
+https://techcrunch.com/2018/06/29/leena-ai-builds-hr-chat-bots-to-answer-policy-questions-automatically/
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.14
+
+Leena.ai Use Case
+
+https://www.youtube.com/watch?v=aiuDC2OSIYE
+
+https://www.youtube.com/watch?v=aiuDC2OSIYE
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.15https://inc42.com/buzz/y-combinator-graduate-hrtech-startup-leena-ai-raises-2-mn-seed-fund/
+
+https://inc42.com/buzz/y-combinator-graduate-hrtech-startup-leena-ai-raises-2-mn-seed-fund/
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.16
+https://www.theguardian.com/technology/2016/jun/28/chatbot-ai-lawyer-donotpay-parking-tickets-london-new-york
+
+https://www.theguardian.com/technology/2016/jun/28/chatbot-ai-lawyer-donotpay-parking-tickets-london-new-york
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.17
+
+Perceived Business Benefits
+
+• “Top 5 Emerging Technologies in 2018”
+(Gartner)
+
+• Global Market to reach $1-3B by 2025,
+CAGR of 25-40%
+
+• Huge benefits across the value chain:
+• Sales & Marketing
+• HR & Operations
+• Service & Payment
+• Retention & Growth
+
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.18https://techcrunch.com/2021/03/10/heyday-seed-funding-2/
+
+https://techcrunch.com/2021/03/10/heyday-seed-funding-2/
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.19
+
+Edubots
+
+https://www.edubots.eu
+
+→ Worksheet #7: Task 1
+
+https://www.edubots.eu
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.20
+
+Outline
+
+1 Introduction
+
+2 Search-Based Bots
+
+3 Pattern-Matching Bots
+
+4 Grounding-Based Bots
+
+5 Chatbot Design
+
+6 Notes and Further Reading
+
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.21
+
+Basic approach
+
+Information Retrieval-based Approach
+Given a corpus of previously answered questions
+
+• Create tf-idf vector of the question
+• Compute cosine similarity with either:
+
+• tf-idf vectors of answers (if only answers available)
+• tf-idf vectors of questions (if question/answer pairs available)
+
+Example Dataset
+1.4 million answered questions from Amazon:
+https://jmcauley.ucsd.edu/data/amazon/qa/
+
+https://jmcauley.ucsd.edu/data/amazon/qa/
+
+
+QnA Maker (Microsoft)
+
+https://www.qnamaker.ai/
+
+https://www.qnamaker.ai/
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.23
+
+QnA Maker: Example
+
+https://docs.microsoft.com/en-us/azure/cognitive-services/QnAMaker/quickstarts/create-publish-knowledge-base?tabs=v1
+
+https://docs.microsoft.com/en-us/azure/cognitive-services/QnAMaker/quickstarts/create-publish-knowledge-base?tabs=v1
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.24
+
+Outline
+
+1 Introduction
+
+2 Search-Based Bots
+
+3 Pattern-Matching Bots
+
+4 Grounding-Based Bots
+
+5 Chatbot Design
+
+6 Notes and Further Reading
+
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.25
+
+Eliza Example
+
+Eliza + DOCTOR script
+If the input sentence is:
+
+I am very unhappy these days.
+
+Eliza’s response will be:
+How long have you been very unhappy these days?
+
+Processing
+Keyword:
+
+I am
+
+Decomposition pattern:
+I am <whatever>
+
+Reassembly Pattern:
+How long have you been <whatever>?
+
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.26
+
+Pattern-response matching
+
+"(.*)?do you remember (.*)?": [
+"Did you think I would forget $2?",
+"Why do you think I should recall $2 now?",
+"What about $2?",
+"You mentioned $2",
+],
+
+"(.*)?my mother (.*)?": [
+"Who else in your family $2?",
+"Tell me more about your family",
+],
+
+"(.*)?why don’t you (.*)?": [
+"Should you $2 yourself?",
+"Do you believe I don’t $2?",
+"Perhaps I will $2 in good time",
+],
+
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.27
+
+Regular Expressions
+
+Finite State Machine
+A.k.a deterministic finite automaton (DFA).
+
+Copyright by Dnu72 (https://commons.wikimedia.org/wiki/File:Automata_theory.svg), “Automata theory”, licensed under https://creativecommons.org/licenses/by- sa/3.0/legalcode
+
+https://commons.wikimedia.org/wiki/File:Automata_theory.svg
+https://creativecommons.org/licenses/by-sa/3.0/legalcode
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.28
+
+Regular Expressions
+
+Basic Concepts (https://en.wikipedia.org/wiki/Regular_expression)
+
+Boolean "or": A vertical bar separates alternatives. For example, gray|grey can match
+“gray” or “grey”.
+
+Grouping: Parentheses are used to define the scope and precedence of the operators
+(among other uses). For example, gray|grey and gr(a|e)y are equivalent
+patterns which both describe the set of "gray" or "grey".
+
+Quantification: A quantifier after a token (such as a character) or group specifies how often
+that a preceding element is allowed to occur:
+
+• ? The question mark indicates zero or one occurrences of the preceding
+element. For example, colou?r matches both "color" and "colour".
+
+• * The asterisk indicates zero or more occurrences of the preceding
+element. For example, ab*c matches "ac", "abc", "abbc", "abbbc", and
+so on.
+
+• + The plus sign indicates one or more occurrences of the preceding
+element. For example, ab+c matches "abc", "abbc", "abbbc", and so on,
+but not "ac".
+
+• {n} The preceding item is matched exactly n times.
+• {min,} The preceding item is matched min or more times.
+• {min,max} The preceding item is matched at least min times, but not
+
+more than max times.
+
+→ Worksheet #7: Task 2
+
+https://en.wikipedia.org/wiki/Regular_expression)
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.29
+
+Artificial Intelligence Markup Language (AIML)
+
+Towards Chatbot Frameworks
+
+• Open standard, started in 1995 by Richard Wallace et al.
+• Used in the A.L.I.C.E. chatbot (and many others)
+• Using XML-based patterns
+• AIML kernel loads patterns and responds when match is found
+
+Example
+
+<category>
+<pattern>HELLO *</pattern>
+<template>Hi, human!</template>
+
+</category>
+<category>
+<pattern>WHAT IS YOUR NAME</pattern>
+<template>I am ConUBot, your helpful assistant.</template>
+
+</category>
+
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.30
+
+AIML Examples (v2.0)
+
+<?xml version="1.0" encoding="UTF-8"?><aiml version="2.0">
+<category>
+
+<pattern>HI</pattern>
+<template>Hi!</template>
+
+</category>
+
+<category>
+<pattern>[HELLO HI YO YOH YO’]
+
+[ROSA ROSE CHATTY CHATBOT BOT CHATTERBOT]</pattern>
+<template>Hi , How are you?</template>
+
+</category>
+
+<category>
+<pattern>[HELLO HI YO YOH YO’ ’SUP SUP OK HEY]
+
+[HAL YOU U YALL Y’ALL YOUS YOUSE]</pattern>
+<template>Good one.</template>
+
+</category>
+</aiml>
+
+(from [LHH19, Chapter 12])
+
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.31
+
+Python & AIML
+
+Python Implementations
+
+• E.g., PyAiml, aiml, aiml_bot
+• Support AIML 1.0 only :(
+
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0.1">
+<category>
+<pattern>HELLO *</pattern>
+<template>Hi Human!</template>
+
+</category>
+<category>
+<pattern>HELLO TROLL</pattern>
+<template>Good one, human.</template>
+
+</category>
+</aiml>
+
+Using aiml_bot
+
+import aiml_bot
+bot = aiml_bot.Bot(learn="conubot.aiml")
+
+In : bot.respond("Hello Conubot!!!")
+Out: ’Hi Human!’
+
+See https://pypi.org/project/AIML-Bot/
+
+https://pypi.org/project/AIML-Bot/
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.32
+
+Random answers
+
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="1.0.1">
+<category>
+<pattern>HELLO *</pattern>
+<template>
+<random>
+<li>Hi Human!</li>
+<li>Hi there!</li>
+<li>Hello!</li>
+
+</random>
+</template>
+
+</category>
+<category>
+<pattern>HELLO TROLL</pattern>
+<template>
+<random>
+<li>Good one, human.</li>
+<li>Clever!</li>
+
+</random>
+</template>
+
+</category>
+</aiml>
+
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.33
+
+Sessions and Predicates
+
+<aiml version="1.0.1" encoding="UTF-8">
+<category>
+
+<pattern>MY DOGS NAME IS *</pattern>
+<template>
+
+That is interesting that you have a dog
+named <set name="dog"><star/></set>
+
+</template>
+</category>
+<category>
+
+<pattern>WHAT IS MY DOGS NAME</pattern>
+<template>
+
+Your dog’s name is <get name="dog"/>.
+</template>
+
+</category>
+</aiml>
+
+Example
+My dogs name is Max
+That is interesting that you have a dog named Max
+...
+What is my dogs name?
+Your dog’s name is Max.
+https://www.devdungeon.com/content/ai-chat-bot-python-aiml#sessions
+
+https://www.devdungeon.com/content/ai-chat-bot-python-aiml#sessions
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.34
+
+AIML 2.0 Extensions: Rich media, hyperlinks, ...
+
+<card>
+<image>www.png</image>
+<title>Italian Greyhound</title>
+<subtitle>A very good dog</subtitle>
+<button>
+<text>AIML How-To</text>
+<postback>HOW TO</postback>
+
+</button>
+<button>
+<text>Back To Tour</text>
+<postback>RESUME TOUR</postback>
+
+</button>
+</card>
+
+http://www.aiml.foundation/doc.html
+
+http://www.aiml.foundation/doc.html
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.35
+
+Pandorabots (https://pandorabots.com)
+Cloud-based platform for AIML 2.0 bots
+
+https://pandorabots.com
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.36
+
+Other bot languages
+
+API.ai
+Proprietary, intuitive language for dialog specifications
+
+• Dialogue history, location and user preferences
+• Developed by startup Speaktoit, released as api.ai in 2014
+
+Dialogflow
+API.ai was bought by Google in 2016 and renamed in 2017 to Dialogflow
+
+• Powers Google Assistant and other services
+
+api.ai
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.37
+
+https://aws.amazon.com/lex/
+
+https://aws.amazon.com/lex/
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.38
+
+Managing State (Context)
+
+Copyright 2019 by Manning Publications Co., [LHH19]
+
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.39
+
+Outline
+
+1 Introduction
+
+2 Search-Based Bots
+
+3 Pattern-Matching Bots
+
+4 Grounding-Based Bots
+Question Classification
+NLP Pipelines
+Example: Watson
+
+5 Chatbot Design
+
+6 Notes and Further Reading
+
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.40
+
+Grounding
+
+Adding Knowledge
+
+• Using a knowledge graph when creating answers
+• More scalable than hard-coding every possible answer in patterns
+
+From the lab exercises...
+
+1 What is <X>?
+E.g., “What is Concordia University?”
+
+2 ⇒ query DBpedia to retrieve the rdfs:comment (in the user’s language) of X
+Concordia University (commonly referred to as Concordia) is a public
+comprehensive university located in Montreal, Quebec, Canada.
+Founded in 1974 following the merger of Loyola College and Sir
+George Williams University, Concordia is one of the three universities
+in Quebec where English is the primary language of instruction.
+
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.41
+
+Question-answering Workflow
+
+Copyright 2013 by Manning Publications Co., [IMF13]
+
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.42
+
+Question Types
+
+Classifying Questions
+Different types of questions require different SPARQL query structures (ASK,
+SELECT, using COUNT, etc.)
+
+Copyright 2013 by Manning Publications Co., [IMF13]
+
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.43
+
+Question Types (contd.)
+
+Copyright 2013 by Manning Publications Co., [IMF13]
+
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.44
+
+Question Classification
+
+Applying ML
+
+• What we need is a classifier that takes a question as input and returns the type
+as output
+
+• This is a typical machine learning problem (supervised learning)
+
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.45
+
+Feature Extraction
+
+Feature Engineering
+Need to convert text (here: question) into a feature vector
+
+• Could use count or tf-idf vector
+• but this results in a high number of dimensions (and possible overfitting)
+
+Idea: Reduce Dimensions
+Can we come up with some other features that can be easily extracted?
+
+• Length (in words/characters)?
+• Number of words with capital letters?
+• Ends with question mark or not?
+• Number of nouns/verbs?
+
+Challenge: find features that facilitate classification.
+
+→ Worksheet #7: Tasks 3 & 4
+
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.46
+
+Dimensionality reduction in NLP
+
+Some common strategies
+
+Stemming: reduce words to their stem (e.g., students, student ⇒ student)
+Stopword removal: remove stop-words (e.g., the, in, an, a, ...)
+
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.47
+
+Example NLP Pipeline
+
+Copyright 2019 by Manning Publications Co., [LHH19]
+
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.48
+
+Tokenization
+
+Task
+
+• Split input stream of characters into individual tokens (words, numbers, etc.)
+• Done by a Tokenizer (e.g., the default tokenizer in scikit-learn)
+
+Tokenization can be difficult...
+For example, biomedical documents with complex expressions, chemical formulas,
+etc.:
+
+• 1,4-β-xylanase II from Trichoderma reesei
+• When N-formyl-L-methionyl-L-leucyl-L-phenylalanine (fMLP) was injected. . .
+• Technetium-99m-CDO-MeB [Bis[1,2-cyclohexanedione-dioximato(1-
+
+)-O]-[1,2-cyclohexanedione dioximato(2-)-O]
+methyl-borato(2-)-N,N′,N′′,N′′′,N′′′′,N′′′′′)-chlorotechnetium) belongs to a family
+of compounds. . .
+
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.49
+
+Part-of-Speech (POS) Tagging and Parsing
+
+POS Tagging
+Assign a POS tag (e.g., Noun, Verb, Adjective, Adverb, ...) to each Token:
+
+The/DT big/ADJ dog/NN
+
+Can be done reliably, available in NLP libraries (e.g, spaCy or NLTK for Python).
+
+Parsing
+Create a tree representing a sentence’s grammatical structure
+
+You can then extract subject or object, e.g., to use in a SPARQL query.
+→ Worksheet #7: Task 5
+
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.50
+
+Generic SPARQL Query Generator
+
+Unger C, Bühmann L, Lehmann J, Ngonga Ngomo AC, Gerber D, Cimiano P. Template-based question
+answering over RDF data. In Proceedings of the 21st international conference on World Wide Web 2012
+Apr 16 (pp. 639-648).
+
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.51
+
+Generating SPARQL Queries (I)
+
+Steinmetz N, Arning AK, Sattler KU. From natural language questions to SPARQL queries: a
+pattern-based approach. BTW 2019. https://dl.gi.de/handle/20.500.12116/21702
+
+https://dl.gi.de/handle/20.500.12116/21702
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.52
+
+Generating SPARQL Queries (II)
+
+Steinmetz N, Arning AK, Sattler KU. From natural language questions to SPARQL queries: a
+pattern-based approach. BTW 2019. https://dl.gi.de/handle/20.500.12116/21702
+
+https://dl.gi.de/handle/20.500.12116/21702
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.53
+
+Generating SPARQL Queries: Evaluation
+
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.54
+
+The Stanford Question Answering Dataset (SQuAD)
+
+https://rajpurkar.github.io/SQuAD-explorer/
+
+→ Worksheet #7: Task 6
+
+https://rajpurkar.github.io/SQuAD-explorer/
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.55
+
+IBM Watson
+
+Watson is a type of question-answering (QA) system, first developed 2006–2011
+
+2011 Jeopardy! competition: 2,880 POWER7 threads and 16 terabytes of RAM
+
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.56
+
+IBM Watson: The Science Behind an Answer (2011)
+
+https://www.youtube.com/watch?v=_0-priuvAR4
+
+https://www.youtube.com/watch?v=_0-priuvAR4
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.57
+
+Outline
+
+1 Introduction
+
+2 Search-Based Bots
+
+3 Pattern-Matching Bots
+
+4 Grounding-Based Bots
+
+5 Chatbot Design
+Design process
+Summary
+
+6 Notes and Further Reading
+
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.58
+
+Bot Design Process
+
+User Stories
+
+• Develop pairs of user questions – expected answers
+• Generalize multiple stories with the same theme
+
+Development
+
+• Identify appropriate technology for specific type of question
+• Enhance bot based on approach (e.g., add data for retrieval)
+
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.59
+
+Summary of Chatbot Approaches
+
+Copyright 2019 by Manning Publications Co., [LHH19]
+
+→ Worksheet #7: Task 7
+
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.60
+
+Outline
+
+1 Introduction
+
+2 Search-Based Bots
+
+3 Pattern-Matching Bots
+
+4 Grounding-Based Bots
+
+5 Chatbot Design
+
+6 Notes and Further Reading
+
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.61
+
+Reading Material
+
+Required
+
+• [LHH19, Chapter 12] (Dialog engines)
+
+Supplemental
+
+• [IMF13, Chapter 8] (Building a QA System)
+• [RN10, Chapter 26] (Philosophical Foundations)
+
+
+
+René Witte
+
+Introduction
+Intelligent Conversational
+Agents
+
+Examples
+
+Search-Based Bots
+
+Pattern-Matching Bots
+
+Grounding-Based Bots
+Question Classification
+
+NLP Pipelines
+
+Example: Watson
+
+Chatbot Design
+Design process
+
+Summary
+
+Notes and Further
+Reading
+
+8.62
+
+References
+
+[IMF13] Grant S. Ingersoll, Thomas S. Morton, and Andrew L. Farris.
+Taming Text: How to find, organise, and manipulate it.
+Manning, 2013.
+https://concordiauniversity.on.worldcat.org/oclc/772977853.
+
+[LHH19] Hobson Lane, Cole Howard, and Hannes Max Hapke.
+Natural Language Processing in Action.
+Manning Publications Co., 2019.
+https://concordiauniversity.on.worldcat.org/oclc/1102387045.
+
+[RN10] Stuart Russell and Peter Norvig.
+Artificial Intelligence: A Modern Approach.
+Prentice Hall, 3rd edition, 2010.
+https://concordiauniversity.on.worldcat.org/oclc/359890490.
+
+https://concordiauniversity.on.worldcat.org/oclc/772977853
+https://concordiauniversity.on.worldcat.org/oclc/1102387045
+https://concordiauniversity.on.worldcat.org/oclc/359890490
+
+	Chatbots
+	Introduction
+	Intelligent Conversational Agents
+	Examples
+
+	Search-Based Bots
+	Pattern-Matching Bots
+	Grounding-Based Bots
+	Question Classification
+	NLP Pipelines
+	Example: Watson
+
+	Chatbot Design
+	Design process
+	Summary
+
+	Notes and Further Reading
+
+

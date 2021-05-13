@@ -1,0 +1,7 @@
+What are the total number of course URIs?
+
+PREFIX teach: <http://linkedscience.org/teach/ns#>
+SELECT (COUNT(*) as ?totalCourses)
+WHERE {
+  ?subject a teach:Course
+}
